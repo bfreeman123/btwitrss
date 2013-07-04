@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Twitter Shizzle</title>
+</head>
+<body>
+<h1>Twitter Accounts</h1>
+<form method="post" action="/create_twitter">
+<input type="text" name="username">
+<input type="submit" value="Create New RSS Stream">
+</form>
+<br/>
+<h4>Current Feeds</h4>
+{% for account in accounts %}
+<a href="/rss?username={{ account.username }}">{{ account.username }}</a><br/>
+{% endfor %}
+</body>
+</html>

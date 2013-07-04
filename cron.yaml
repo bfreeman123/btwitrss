@@ -1,0 +1,8 @@
+cron:
+- description: fetch twitter feeds
+  url: /spawn_worker
+  schedule: every 15 minutes
+- description: prune old tweets
+  url: /prune
+  schedule: every day 23:00
+  timezone: US/Pacific
